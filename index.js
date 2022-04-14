@@ -4,7 +4,7 @@ const request = require ('request-promise');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-const apiKey = "af54ac8a0db812064abe2439fb08e7c5";
+const apiKey = process.env.REACT_APP_SCRAPERAPI_API_KEY;
 const baseUrl = `http://api.scraperapi.com?api_key=${apiKey}&autoparse=true`;
 
 //you can hide this api key outside this file and require a user of the api to provide their own key using a function to replace baseUrl
